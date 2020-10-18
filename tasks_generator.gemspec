@@ -20,10 +20,10 @@ spec = Gem::Specification.new do |spec|
   spec.test_files    = spec.files.grep(%r{^(test|spec|features)/})
   spec.require_paths = ["lib"]
 
-  spec.add_runtime_dependency "bundler", "~> 1.6"
+  spec.add_runtime_dependency "bundler"
   spec.add_runtime_dependency "rake"
-  spec.add_runtime_dependency "rake-compiler", ">= 0.9.5"
-  spec.add_runtime_dependency "rice", ">= 1.7.0"
+  spec.add_runtime_dependency "rake-compiler"
+  spec.add_runtime_dependency "rice"
 
   spec.platform = Gem::Platform::RUBY
   spec.extensions = %w[ext/tasks_generator/extconf.rb]
