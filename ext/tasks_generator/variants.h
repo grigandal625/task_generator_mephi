@@ -1,6 +1,6 @@
 #pragma once
 
-#include <math>
+#include <cmath>
 #include <vector>
 #include "question.h"
 
@@ -147,7 +147,7 @@ class variants_t {
       for (size_t i = 0; i < questions_count; ++i)
         x += (buffer[i] - avg) * (buffer[i] - avg);
       x /= questions_count;
-      x = sqrt(x);
+      x = std::sqrt(x);
       fitness += x;
     }
     {
