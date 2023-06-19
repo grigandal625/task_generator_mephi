@@ -60,7 +60,12 @@ namespace ailab
     question_t get_question(size_t topic_id) const
     {
       if (questions.at(topic_id).empty())
+      {
+        int x = questions.at(topic_id).size();
+        std::cout << topic_id << std::endl;
+        std::cout << x << std::endl;
         throw std::logic_error("Not enough questions for topic");
+      }
       size_t r = rand() % questions.at(topic_id).size();
       question_t result = questions.at(topic_id)[r];
       return result;
